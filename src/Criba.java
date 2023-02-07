@@ -1,6 +1,21 @@
 import java.util.Scanner;
 
+/**
+ * La clase `Criba` contiene un método estático para generar un vector de
+ * números primos hasta un máximo especificado, utilizando el algoritmo de
+ * la criba de Eratóstenes.
+ *
+ * @author Andres Ramos G.
+ *
+ * @version 3.0 final
+ */
 public class Criba {
+    /**
+     * Genera un vector de números primos hasta el máximo especificado.
+     *
+     * @param max El máximo número a considerar.
+     * @return Un vector de números primos hasta `max`.
+     */
     public static int[] generarPrimos(int max) {
         if (max < 2) {
             return new int[0];
@@ -37,6 +52,12 @@ public class Criba {
         return primos;
     }
 
+    /**
+     * Punto de entrada de la aplicación. Pide al usuario que introduzca un
+     * número y muestra un vector de números primos hasta ese número.
+     *
+     * @param args Los argumentos de la línea de comandos. No se utilizan.
+     */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce el número para la criba de Erastótenes:");
